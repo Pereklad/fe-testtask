@@ -4,24 +4,25 @@ import PropTypes from 'prop-types';
 import './radio.scss';
 
 export const Radio = (props) => {
-  const { value, checked, label, onChange } = props;
+  const { id, value, checked, label, onChange } = props;
 
   return (
     <section className="radio-wrapper">
       <input
         type="radio"
-        id="radio-content"
+        id={id}
         value={value}
         className="radio"
         checked={checked}
         onChange={onChange}
       />
-      <label htmlFor="radio-content">{label}</label>
+      <label htmlFor={id}>{label}</label>
     </section>
   );
 };
 
 Radio.propTypes = {
+  id: PropTypes.string,
   value: PropTypes.string,
   checked: PropTypes.bool,
   label: PropTypes.string,

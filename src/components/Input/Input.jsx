@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './input.scss';
 
 export const Input = (props) => {
-  const { value = '', onChange, error, label, helperText, type = 'text' } = props;
+  const { value = '', onChange, error, label, helperText, id, type = 'text' } = props;
 
   const labelStyles = classNames({
     input__label: true,
@@ -19,10 +19,10 @@ export const Input = (props) => {
 
   return (
     <div className={containerStyles}>
-      <label htmlFor="inputLabel" className={labelStyles}>
+      <label htmlFor={id} className={labelStyles}>
         {label}
       </label>
-      <input value={value} type={type} onChange={onChange} id="inputLabel" className="input" />
+      <input value={value} type={type} onChange={onChange} id={id} className="input" />
       {helperText && <div className="input__helper-text">{helperText}</div>}
     </div>
   );
@@ -33,6 +33,7 @@ Input.propTypes = {
   label: PropTypes.string,
   helperText: PropTypes.string,
   type: PropTypes.string,
+  id: PropTypes.string,
   error: PropTypes.string,
   onChange: PropTypes.func
 };

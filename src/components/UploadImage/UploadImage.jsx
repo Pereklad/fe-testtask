@@ -42,7 +42,12 @@ export const UploadImage = (props) => {
         ref={fileRef}
         onChange={onChangeInput}
       />
-      <input className="upload-image__input" value={file?.name} disabled />
+      <input
+        className="upload-image__input"
+        value={file?.name}
+        disabled
+        aria-label="upload-image"
+      />
       {helperText && <div className="input__helper-text">{helperText}</div>}
     </div>
   );

@@ -11,7 +11,7 @@ export const Header = () => {
 
   return (
     <div className="header">
-      <img src={LogoImage} alt={LogoImage} />
+      <img src={LogoImage} alt={LogoImage} width={104} height={26} />
       <div className="header__content">
         <Button title={t('buttons:users')} />
         <Button title={t('buttons:sign_up')} />

@@ -89,6 +89,7 @@ export const EmployeeForm = () => {
         {!isUserCreated ? (
           <form className="employee-form" onSubmit={onSubmitForm}>
             <Input
+              id="email"
               label={t('home:employee_form:inputs:email')}
               value={formData.email}
               helperText={normalizeFieldError('email')}
@@ -96,6 +97,7 @@ export const EmployeeForm = () => {
               onChange={(event) => onChangeInput(event, 'email')}
             />
             <Input
+              id="name"
               label={t('home:employee_form:inputs:name')}
               value={formData.name}
               helperText={normalizeFieldError('name')}
@@ -103,6 +105,7 @@ export const EmployeeForm = () => {
               onChange={(event) => onChangeInput(event, 'name')}
             />
             <Input
+              id="phone"
               label={t('home:employee_form:inputs:phone')}
               value={formData.phone}
               error={normalizeFieldError('phone')}
@@ -117,6 +120,7 @@ export const EmployeeForm = () => {
               {userPositions?.map((item) => (
                 <Radio
                   key={item.id}
+                  id={`${item.id}${item.name}`}
                   value={item.id.toString()}
                   label={item.name}
                   checked={formData.position_id === item.id.toString()}

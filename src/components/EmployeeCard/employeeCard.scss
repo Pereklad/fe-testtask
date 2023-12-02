@@ -1,0 +1,39 @@
+@import 'src/sass/mixins';
+@import 'src/sass/common';
+
+.employee-card {
+  width: 100%;
+  max-width: 282px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: $indent20;
+  border-radius: 10px;
+  background-color: $color-white;
+
+  @include tablet {
+    max-width: 344px;
+  }
+
+  @include mobile {
+    max-width: 328px;
+  }
+
+  &__image {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  &__name,
+  &__item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__name {
+    padding: $indent20 0;
+  }
+}

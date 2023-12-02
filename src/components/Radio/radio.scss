@@ -1,0 +1,38 @@
+@import 'src/sass/common';
+
+.radio {
+  appearance: none;
+  border: 1px solid $color-white;
+  background-color: $color-white;
+  border-radius: 50%;
+
+  &:focus-visible {
+    outline-offset: 0;
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+
+    input[type='radio'] {
+      height: 20px;
+      width: 20px;
+      margin: 0;
+      margin-right: $indent12;
+    }
+
+    #radio-content {
+      box-shadow: 0 0 0 1px $color-gray-200;
+
+      &:hover {
+        border-width: 0;
+      }
+
+      &:checked {
+        box-shadow: 0 0 0 1px $color-blue;
+        background-color: $color-blue;
+        border-width: 4px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import 'src/sass/mixins';
+@import 'src/sass/common';
+
+$grid-column: minmax(200px, 1fr);
+
+.employees {
+  &__grid {
+    display: grid;
+    grid-template-columns: $grid-column $grid-column $grid-column;
+    gap: $indent29;
+
+    @include tablet {
+      grid-template-columns: $grid-column $grid-column;
+      gap: $indent16;
+    }
+
+    @include mobile {
+      grid-template-columns: $grid-column;
+      gap: $indent20;
+    }
+  }
+
+  &__button {
+    margin-top: $indent50;
+  }
+}

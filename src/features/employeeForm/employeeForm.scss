@@ -1,0 +1,27 @@
+@import 'src/sass/common';
+
+.employee-form {
+  width: 100%;
+  max-width: 380px;
+
+  div {
+    margin-bottom: $indent50;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__position {
+    &-title {
+      text-align: left;
+      margin: $indent43 0 $indent14 0;
+    }
+
+    section {
+      margin-bottom: $indent13;
+    }
+  }
+}

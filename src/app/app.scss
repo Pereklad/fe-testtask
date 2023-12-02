@@ -1,0 +1,21 @@
+@import 'src/sass/mixins';
+@import 'src/sass/common';
+
+.app {
+  @include section;
+
+  text-align: center;
+  margin-bottom: $indent100;
+}
+
+.spacer {
+  margin-top: $indent140;
+}
+
+body {
+  background-color: $color-gray-100;
+}
+
+* {
+  transition: all 0.3s;
+}

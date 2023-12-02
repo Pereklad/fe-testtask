@@ -1,0 +1,17 @@
+@import '../common';
+
+// HEADLINE
+
+@mixin h1 {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@mixin body {
+  font-family: $mainFont;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}

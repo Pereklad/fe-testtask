@@ -1,0 +1,22 @@
+@import 'src/sass/mixins';
+@import 'src/sass/common';
+
+.button {
+  min-width: 90px;
+  padding: $indent4 $indent18;
+  background-color: $color-yellow;
+  border-radius: 80px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-yellow-600;
+  }
+
+  &:disabled {
+    color: $color-white;
+    background-color: $color-gray;
+    cursor: not-allowed;
+  }
+}

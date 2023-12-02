@@ -1,0 +1,33 @@
+@import 'src/sass/mixins';
+@import 'src/sass/common';
+
+.header {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  padding: 0 $indent60;
+  background: $color-white;
+  z-index: 10;
+
+  @include tablet {
+    padding: 0 $indent32;
+  }
+
+  @include mobile {
+    padding: 0 $indent16;
+  }
+
+  &__content {
+    button {
+      margin-right: $indent10;
+
+      &:last-child {
+        margin-right: unset;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import 'src/sass/mixins';
+@import 'src/sass/common';
+
+.layout {
+  padding: 0 $indent52;
+
+  @include tablet {
+    padding: 0 $indent24;
+  }
+
+  @include mobile {
+    padding: 0 $indent6;
+  }
+
+  &__title {
+    @include h1;
+
+    margin-bottom: $indent50;
+  }
+}

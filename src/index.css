@@ -1,0 +1,24 @@
+@import './sass/fonts/index.css';
+
+body {
+  margin: 0;
+  font-family: 'Nunito';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Nunito';
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
